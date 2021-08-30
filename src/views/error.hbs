@@ -1,0 +1,108 @@
+{{#if user}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/notes">Halcón de oro</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Notas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/notes">Todas las notas</a>
+              <a class="dropdown-item" href="/notes/add">Añadir notas</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Productos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/productos">Todos los productos</a>
+              <a class="dropdown-item" href="/productos/add">Añadir productos</a>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Ventas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/ventas">Todos las ventas</a>
+              <a class="dropdown-item" href="/ventas/add">Añadir ventas</a>
+          </li>
+          <li class="nav-item">
+             <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Compras
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/compras">Todas las compras</a>
+              <a class="dropdown-item" href="/compras/add">Añadir compras</a>
+          </li>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Clientes
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/clientes">Todos los clientes</a>
+              <a class="dropdown-item" href="/clientes/add">Añadir clientes</a>
+          </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+          <div class="dropdown-divider"></div>
+          <li class="nav-item active">
+          <a class="nav-link" href="/users/logout">Cerrar sesión </a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signin">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signup">Register</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h1>404</h1>
+			</div>
+            <br>
+			<h2>Oops! Esta pagina al parecer no existe</h2>
+			<p>Perdon Pero la pagina que buscas al parecer no existe o ha sido cambiada, perdón por las molestias :(</p>
+			<a href="/notes">Regresar al menu anterior :D</a>
+		</div>
+	</div>
+
+{{else}}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">Halcón de oro</a>
+  </div>
+</nav>
+
+<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h1>404</h1>
+			</div>
+            <br>
+			<h2>Oops! Esta pagina al parecer no existe</h2>
+			<p>Perdon Pero la pagina que buscas al parecer no existe o ha sido cambiada, perdón por las molestias :(</p>
+			<a href="/">Regresar al menu anterior :D</a>
+		</div>
+	</div>
+
+
+{{/if}}
+
+
+
